@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exam Proctoring</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+<h2>Online Proctoring - Monitoring</h2>
+
+<div id="video-container">
+    <img id="video_feed" width="640" height="480" />
+</div>
+
+<div id="status">
+    <p>Face: <span id="face_status">-</span></p>
+    <p>Gaze: <span id="gaze_status">-</span></p>
+    <p>Eyes: <span id="eyes_status">-</span></p>
+    <p>Mouth: <span id="mouth_status">-</span></p>
+    <p>Timestamp: <span id="timestamp_status">-</span></p>
+</div>
+
+<div id="violations">
+    <h3>Violations</h3>
+    <ul id="violations_list"></ul>
+</div>
+
+<script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
