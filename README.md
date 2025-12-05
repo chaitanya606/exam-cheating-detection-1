@@ -111,14 +111,19 @@ python src/dashboard/app.py
 ## System Architecture
 ```
 exam_cheating_detection/
-├── config/              # Configuration files
-├── models/              # Pretrained models
+
+├── models/              Yolo8n.pt
 ├── src/                 # Source code
-│   ├── detection/       # Detection modules
+|   ├── config/              YAML File
+│   ├── detection/       (audio_detection.py, eye_tracking.py, face_tracking.py, mouth_detection.py, multi_face.py, object_detection.py)
 │   ├── reporting/       # Reporting application
-│   ├── utils/           # Utility functions
+│   ├── utils/           attached image
 │   ├── dashboard/       # Web dashboard
-│   └── main.py          # Main application
+│   └── webapp/
+|         └──app.py
+|         └──static/script.js
+|         └──templates/ExamFaceInput.html
+|
 ├── logs/                # Session logs
 └── recordings/          # Recorded video sessions
 ```

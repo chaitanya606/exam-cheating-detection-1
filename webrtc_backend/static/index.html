@@ -1,0 +1,35 @@
+<!-- webrtc_backend/static/index.html -->
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Proctoring WebRTC (aiortc)</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    video { border: 1px solid #ccc; width: 480px; height: 360px; display:block; }
+    #controls { margin-top: 10px; }
+    #violations { margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <h2>Proctoring WebRTC Demo</h2>
+
+  <label>Local camera preview:</label>
+  <video id="localVideo" autoplay muted playsinline></video>
+
+  <div id="controls">
+    <button id="startBtn">Start & Connect</button>
+    <button id="shareScreenBtn">Share Screen</button>
+    <button id="triggerBtn">Trigger Manual Screen Save</button>
+  </div>
+
+  <div id="status"></div>
+
+  <div id="violations">
+    <h3>Violations</h3>
+    <ul id="violations_list"></ul>
+  </div>
+
+  <script src="static/script.js"></script>
+</body>
+</html>
